@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* MAIN GRID LAYOUT */
+.container {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "hero"
+    "cards"
+    "footer";
+    grid-template-rows: 5% 55% 60% 15%;
+}
+
+/* HEADER */
+.site-header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* HERO SECTION */
+.hero-section {
+    grid-area: hero;
+    background: linear-gradient(to bottom, #FFD400 1000%, #012E61 50%);
+    padding: 40px 0;
+    min-height: 40vh;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* .hero-images: row of 4 photos */
+.hero-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* space between images */
+
+}
+
+.hero-images img {
+    width: 25%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+    grid-column: span 1;
+}
+
+/* CARDS SECTION */
+.cards-section {
+    grid-area: cards;
+    background-color: #012E61;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 17%;
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px;
+    max-height: 65%;
+}
+
+.card-icon {
+    width: 50px;
+    margin-bottom: 40px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.more-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #FFD400;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+.site-footer {
+    grid-area: footer;
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+}
